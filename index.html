@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ANS.A | Cybersecurity Professional & Offensive Security Researcher Portfolio. NASA, DNFSB, BIE Bugcrowd Hall of Famer.">
+    <title>ANS.A // Cybersecurity Portfolio</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cyber Grid Background Overlay -->
+    <div class="cyber-grid"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">[</span>ANS.A<span class="logo-accent">]</span>
+                <span class="cursor-blink">_</span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#about" class="nav-link"><span class="nav-number">01.</span> About</a>
+                <a href="#experience" class="nav-link"><span class="nav-number">02.</span> Experience</a>
+                <a href="#projects" class="nav-link"><span class="nav-number">03.</span> Projects</a>
+                <a href="#skills" class="nav-link"><span class="nav-number">04.</span> Skills</a>
+                <a href="#contact" class="nav-link btn-glow-nav">Secure Connection</a>
+            </nav>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="status-indicator">
+                        <img src="https://tryhackme.com/static/img/favicon.png" alt="TryHackMe Logo" class="status-icon">
+                        <span class="status-dot animate-pulse"></span>
+                        <span class="status-text">SYSTEM ACTIVE // TOP 3% TRYHACKME</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Ans.A
+                        <span class="hero-subtitle-block">
+                            I specialize in <span class="typewriter" id="typewriter"></span><span class="cursor-blink">|</span>
+                        </span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        Cybersecurity professional with hands-on experience in SIEM monitoring, log analysis, and infrastructure security, complemented by an offensive security background in VAPT and Active Directory assessments. Recognized in Bugcrowd Hall of Fames by <strong>NASA</strong>, <strong>DNFSB</strong>, and <strong>BIE</strong>.
+                    </p>
+                    
+                    <div class="hall-of-fame-badges">
+                        <div class="badge" title="NASA Vulnerability Disclosure Program Hall of Fame">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="NASA Logo" class="badge-img">
+                            <span class="badge-text">NASA VDP</span>
+                        </div>
+                        <div class="badge" title="Defense Nuclear Facilities Safety Board VDP Hall of Fame">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Seal_of_the_Defense_Nuclear_Facilities_Safety_Board.png" alt="DNFSB Logo" class="badge-img">
+                            <span class="badge-text">DNFSB VDP</span>
+                        </div>
+                        <div class="badge" title="Bureau of Indian Education VDP Hall of Fame">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/BureauIndianEducationSeal.png" alt="BIE Logo" class="badge-img">
+                            <span class="badge-text">BIE VDP</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-ctas">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fa-solid fa-shield-halved"></i> View Audited Projects
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fa-solid fa-terminal"></i> Initialize Contact
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Interactive Terminal Widget -->
+                <div class="terminal-widget">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="t-btn close"></span>
+                            <span class="t-btn minimize"></span>
+                            <span class="t-btn maximize"></span>
+                        </div>
+                        <div class="terminal-title">ans@security-core:~ (ssh)</div>
+                        <div class="terminal-status"><i class="fa-solid fa-lock text-green"></i> SECURE</div>
+                    </div>
+                    <div class="terminal-body" id="terminalBody">
+                        <!-- Initial booting log text will be inserted by JS -->
+                    </div>
+                    <div class="terminal-input-line">
+                        <span class="terminal-prompt">ans@security-core:~$</span>
+                        <input type="text" id="terminalInput" autocomplete="off" autofocus placeholder="type 'help'...">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" data-count="3">0</div>
+                    <div class="stat-label">Bugcrowd Hall of Fames</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" data-count="3">Top 3%</div>
+                    <div class="stat-label">TryHackMe Rank (100+ Rooms)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" data-count="10">0</div>
+                    <div class="stat-label">Active Directory Hosts Audited</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" data-count="5">0</div>
+                    <div class="stat-label">Detailed VAPT Reports Authored</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <h2 class="section-title"><span class="title-number">01.</span> Profile Summary</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            I am a detail-oriented cybersecurity professional who bridges the gap between offensive techniques and defensive configurations. My core focus lies in identifying security vulnerabilities through comprehensive Web & Mobile VAPT, exploiting Active Directory configurations responsibly to harden infrastructures, and designing real-time log ingestion and monitoring frameworks using Splunk and GCP.
+                        </p>
+                        <p>
+                            With a research-first mindset, I regularly participate in bug bounty programs. Responsible disclosure of critical vulnerabilities has earned me spots in the Hall of Fame registries of global organizations.
+                        </p>
+                        <p>
+                            Currently, I am completing my Bachelor of Computer Applications at Indira Gandhi National Open University while continuously expanding my certifications (CompTIA Security+ in progress).
+                        </p>
+                    </div>
+                    <div class="about-card-display">
+                        <div class="terminal-mini-card">
+                            <div class="card-bar">
+                                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                            </div>
+                            <ul class="meta-list">
+                                <li><span class="meta-label">Location:</span> Kerala, India</li>
+                                <li><span class="meta-label">Interests:</span> Ethical Hacking, Active Directory, SIEM</li>
+                                <li><span class="meta-label">OS Exposure:</span> Linux (Kali/Parrot), Windows Server</li>
+                                <li><span class="meta-label">Preferred Shell:</span> Zsh / PowerShell</li>
+                                <li><span class="meta-label">Core Tools:</span> Splunk, NMAP, Burp Suite, Docker, Caido</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience-section" id="experience">
+            <div class="container">
+                <h2 class="section-title"><span class="title-number">02.</span> Professional Experience</h2>
+                <div class="timeline">
+                    <!-- Experience 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header-block">
+                                <div>
+                                    <h3 class="job-title">Research and Development Associate</h3>
+                                    <div class="company-row">
+                                        <img src="https://www.farhanbinfazil.in/offenso-logo.webp" alt="Offenso Logo" class="company-logo">
+                                        <span class="company-name">Offenso Hackers Academy</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="job-meta">
+                                <span class="job-duration"><i class="fa-regular fa-calendar-days"></i> June 2025 – December 2025</span>
+                                <span class="job-location"><i class="fa-solid fa-location-dot"></i> Trivandrum, Kerala</span>
+                            </div>
+                            <ul class="job-details">
+                                <li><strong>Infrastructure Management:</strong> Provisioned and maintained Linux-based GCP infrastructure, virtualized resources, access controls, and secure VPCs.</li>
+                                <li><strong>SIEM & Monitoring:</strong> Configured Splunk for real-time log analysis; built custom dashboards to monitor system health and detect intrusion patterns.</li>
+                                <li><strong>Anonymity Research:</strong> Architected and managed secure Onion Services with a focus on server hardening and network anonymity.</li>
+                                <li><strong>Technical Mentorship:</strong> Mentored 200+ students in ethical hacking and web penetration testing, developing specialized curriculum.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header-block">
+                                <div>
+                                    <h3 class="job-title">Junior Cybersecurity Intern</h3>
+                                    <div class="company-row">
+                                        <img src="https://www.farhanbinfazil.in/logo-cyber-security.webp" alt="Hackware Logo" class="company-logo">
+                                        <span class="company-name">Hackware Security Solutions</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="job-meta">
+                                <span class="job-duration"><i class="fa-regular fa-calendar-days"></i> April 2026 – May 2026</span>
+                                <span class="job-location"><i class="fa-solid fa-location-dot"></i> Ernakulam, Kerala</span>
+                            </div>
+                            <ul class="job-details">
+                                <li><strong>VAPT Execution:</strong> Conducted web and mobile vulnerability assessments and penetration testing (VAPT) to identify and mitigate critical security flaws.</li>
+                                <li><strong>Network & Infrastructure:</strong> Performed network penetration testing against 10+ exposed Active Directory hosts, uncovering privilege escalation paths and misconfigurations.</li>
+                                <li><strong>Active Directory Testing:</strong> Executed targeted AD assessments to evaluate domain security controls, privilege escalation paths, and misconfigurations.</li>
+                                <li><strong>Security Reporting:</strong> Authored 5+ detailed technical reports outlining exploitation vectors, risk ratings, and actionable remediation strategies.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects-section" id="projects">
+            <div class="container">
+                <h2 class="section-title"><span class="title-number">03.</span> Security & Tooling Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-icon-row">
+                            <div class="project-icon">
+                                <i class="fa-solid fa-bridge-water"></i>
+                            </div>
+                            <a href="https://github.com/Ans-A-cyber/kali-mcp" target="_blank" class="project-github-link" title="GitHub Repository">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                        <h3 class="project-title">Kali-MCP: AI Pentesting Bridge</h3>
+                        <p class="project-description">
+                            A specialized Model Context Protocol (MCP) server that safely bridges LLMs directly into an isolated Kali Linux environment via Docker. Allows high-speed, AI-driven security auditing, vulnerability scanning, and pen testing simulation.
+                        </p>
+                        <div class="project-tags">
+                            <span>Docker</span>
+                            <span>MCP</span>
+                            <span>Kali Linux</span>
+                            <span>LLM integration</span>
+                            <span>Node.js</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fa-solid fa-cloud-check"></i>
+                        </div>
+                        <h3 class="project-title">Cloud SIEM Deployment & Monitoring</h3>
+                        <p class="project-description">
+                            Engineered a centralized logging architecture on GCP using Splunk Enterprise to monitor remote web servers. Configured Splunk Universal Forwarders on production VMs to securely ingest system-level and Docker container logs.
+                        </p>
+                        <div class="project-tags">
+                            <span>GCP</span>
+                            <span>Splunk Enterprise</span>
+                            <span>Universal Forwarder</span>
+                            <span>VM Monitoring</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <h3 class="project-title">Hardware Security Payloads</h3>
+                        <p class="project-description">
+                            Designed and coded hardware hacking tools including "Mouse Ducky" and "Bluetooth Ducky" (USB & BT HID payloads) for simulating automated mouse/keyboard actions. Researched wireless input vulnerabilities and conducted circuit integration.
+                        </p>
+                        <div class="project-tags">
+                            <span>USB HID</span>
+                            <span>Bluetooth HID</span>
+                            <span>Circuit Design</span>
+                            <span>C++ / Arduino</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section" id="skills">
+            <div class="container">
+                <h2 class="section-title"><span class="title-number">04.</span> Technical Armory</h2>
+                
+                <div class="skills-tabs">
+                    <button class="tab-btn active" onclick="switchSkillTab(event, 'offensive')">Offensive Sec</button>
+                    <button class="tab-btn" onclick="switchSkillTab(event, 'defensive')">Defensive Sec & Ops</button>
+                    <button class="tab-btn" onclick="switchSkillTab(event, 'platforms')">Tools & Platforms</button>
+                </div>
+
+                <div class="skills-content">
+                    <!-- Offensive Tab -->
+                    <div class="skills-panel active" id="offensive">
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-name-row">
+                                    <span>Web & Mobile VAPT</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name-row">
+                                    <span>Active Directory Hacking</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name-row">
+                                    <span>Network Penetration Testing</span>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name-row">
+                                    <span>Vulnerability Scanning (Nmap/Nessus)</span>
+                                    <span class="skill-percent">92%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 92%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Defensive Tab -->
+                    <div class="skills-panel" id="defensive">
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-name-row">
+                                    <span>SIEM Tools (Splunk Enterprise)</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name-row">
+                                    <span>Log Analysis & Aggregation</span>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name-row">
+                                    <span>Google Cloud Platform (GCP) Security</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name-row">
+                                    <span>Linux System Hardening</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Platforms Tab -->
+                    <div class="skills-panel" id="platforms">
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-name-row">
+                                    <span>Burp Suite & Caido</span>
+                                    <span class="skill-percent">92%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 92%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name-row">
+                                    <span>Docker & Containers</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name-row">
+                                    <span>Wireshark & Packet Analysis</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name-row">
+                                    <span>TryHackMe / HTB Laboratories</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <h2 class="section-title"><span class="title-number">05.</span> Initialize Secure Channel</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Connect with the Researcher</h3>
+                        <p class="contact-intro">
+                            If you require VAPT services, infrastructure security audits, Splunk SIEM configuration, or simply want to talk shop, feel free to send a message.
+                        </p>
+                        <div class="contact-methods">
+                            <div class="method-item">
+                                <i class="fa-solid fa-envelope method-icon"></i>
+                                <div>
+                                    <span class="method-label">SECURE EMAIL</span>
+                                    <a href="mailto:ansanilkumar.s@gmail.com" class="method-value">ansanilkumar.s@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="method-item">
+                                <i class="fa-solid fa-phone method-icon"></i>
+                                <div>
+                                    <span class="method-label">TELEPHONY SECURE</span>
+                                    <a href="tel:+918590941117" class="method-value">+91 8590941117</a>
+                                </div>
+                            </div>
+                            <div class="method-item">
+                                <i class="fa-solid fa-globe method-icon"></i>
+                                <div>
+                                    <span class="method-label">ENCRYPTED SOCIALS</span>
+                                    <div class="social-links">
+                                        <a href="https://www.linkedin.com/in/ans-anilkumar" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                                        <a href="https://github.com/Ans-A-cyber" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Formspree -->
+                    <div class="contact-form-wrapper">
+                        <form id="contactForm" action="https://formspree.io/f/mqakvjgo" method="POST" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name / Operator</label>
+                                    <input type="text" id="name" name="name" required placeholder="e.g. John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Return Signal (Email)</label>
+                                    <input type="email" id="email" name="_replyto" required placeholder="e.g. email@domain.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Payload Classification (Subject)</label>
+                                <input type="text" id="subject" name="subject" required placeholder="e.g. VAPT Inquiry">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Transmission Content (Message)</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <i class="fa-solid fa-paper-plane"></i> Transmit Message
+                            </button>
+                            <div id="formStatus" class="form-status"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="footer-copy">&copy; 2026 ANS.A. All rights reserved. Encryption active.</p>
+            <p class="footer-tech">Built with Vanilla HTML5, CSS3, & Modern JS</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
